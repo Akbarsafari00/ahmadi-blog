@@ -1,0 +1,112 @@
+@import "../variables";
+
+.header {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.header__container {
+    display: flex;
+    @include Container;
+}
+.header__toggle {
+    cursor: pointer;
+    display: none;
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    span {
+        height: 3px;
+        width: 24px;
+        background-color: $dark-color;
+    }
+
+    @include MediaExtraSmall {
+        display: flex;
+    }
+}
+.header__brand {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    @include MediaExtraSmall {
+        flex-grow: 1;
+    }
+}
+
+.header__brand > .title {
+    font-size: $font-size-4;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.header__menu {
+    flex-grow: 1;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    @include MediaExtraSmall {
+        align-items: start;
+        position: absolute;
+        width: 300px;
+        top: 80px;
+        right: 0;
+        bottom: 0;
+        background-color: #f2f2f2;
+        padding: 0;
+    }
+}
+
+.header__menu  > .menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include MediaExtraSmall {
+       flex-direction: column;
+        width: 100%;
+    }
+}
+
+.header__menu  > .menu > li{
+    cursor: pointer;
+    height: 40px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: $font-size-small;
+    &:hover {
+        background-color: #f8f8f8;
+    }
+
+    @include MediaExtraSmall {
+        justify-content: center;
+        height: 60px;
+        border-bottom: 1px solid #eee;
+        margin-left: 0;
+        border-radius: 0;
+    }
+}
+
+.header__menu  > .menu > li > a {
+
+}
+.header__action {
+
+    padding: 0 1rem;
+}
+.header__action > .login {
+    @include Button($primary-color,$light-color)
+}

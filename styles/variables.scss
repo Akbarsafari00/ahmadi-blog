@@ -1,0 +1,60 @@
+$primary-color: #FF2E63;
+$accent-color: #08D9D6;
+$dark-color: #252A34;
+$light-color: #f8f8f8;
+
+$font-size-1: 1.383rem;
+$font-size-2: 1.296rem;
+$font-size-3: 1.215rem;
+$font-size-4: 1.138rem;
+$font-size-5: 1.067rem;
+$font-size-6: 1rem;
+$font-size-small: 0.937rem;
+
+
+@mixin Button($background-color,$color) {
+  height: 40px;
+  padding: 0 1.5rem;
+  color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: $background-color;
+  cursor: pointer;
+}
+@mixin  MediaMedium {
+  @media (max-width: 1130px) {
+    @content
+  }
+}
+
+@mixin  MediaSmall {
+  @media (max-width: 930px) {
+    @content
+  }
+}
+
+@mixin  MediaExtraSmall {
+  @media (max-width: 730px) {
+    @content
+  }
+}
+@mixin  Container {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include MediaMedium {
+    max-width: 830px;
+  }
+
+  @include  MediaSmall {
+    max-width: 630px;
+  }
+
+  @include MediaExtraSmall {
+    max-width: 430px;
+  }
+
+}
