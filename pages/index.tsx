@@ -17,13 +17,13 @@ const Home: NextPage = (props:any) => {
   )
 };
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const allUsers = await prisma.user.findMany({});
-    console.log(allUsers);
-  return { props: { allUsers } }
-};
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   // const allUsers = await prisma.user.findMany({});
+//   //   console.log(allUsers);
+//   // return { props: { allUsers } }
+// };
 
 
 export default Home
