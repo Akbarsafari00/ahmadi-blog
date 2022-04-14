@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import LayoutComponent from '../components/Layout.component'
-import { PrismaClient } from '@prisma/client'
+import prisma from "../prisma/global";
 
 
 
@@ -17,13 +17,13 @@ const Home: NextPage = (props:any) => {
   )
 };
 
-// const prisma = new PrismaClient();
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   // const allUsers = await prisma.user.findMany({});
-//   //   console.log(allUsers);
-//   // return { props: { allUsers } }
-// };
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const allUsers = await prisma.user.findMany({});
+    console.log(allUsers);
+  return { props: { allUsers } }
+};
 
 
 export default Home
