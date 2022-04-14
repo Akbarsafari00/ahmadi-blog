@@ -14,7 +14,7 @@ function HeaderComponent({title}:{title: string}) {
                    <span></span>
                </div>
                <div className={styles.header__brand}>
-                   <h4 className={styles.title}>xوبلاگ احمدی</h4>
+                   <h4 className={styles.title}>وبلاگ احمدی</h4>
                </div>
                <div className={styles.header__menu}>
                    <ul className={styles.menu}>
