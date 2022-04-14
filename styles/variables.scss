@@ -11,6 +11,7 @@ $font-size-5: 1.067rem;
 $font-size-6: 1rem;
 $font-size-small: 0.937rem;
 
+$box-shadow : rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 @mixin Button($background-color,$color) {
   height: 40px;
@@ -22,6 +23,8 @@ $font-size-small: 0.937rem;
   border-radius: 0.5rem;
   background-color: $background-color;
   cursor: pointer;
+  border: 0;
+  font-family: IranYekan, serif;
 }
 @mixin  MediaMedium {
   @media (max-width: 1130px) {
@@ -44,6 +47,7 @@ $font-size-small: 0.937rem;
   max-width: 1080px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 1rem;
 
   @include MediaMedium {
     max-width: 830px;

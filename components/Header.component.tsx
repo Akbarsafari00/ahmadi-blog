@@ -25,9 +25,9 @@ function HeaderComponent({title}: { title: string }) {
                     </ul>
                 </div>
                 <div className={styles.header__action}>
-                    <Link href={"#"}><a className={styles.login}><Image src={"/svg/noun-user-4756261.svg"} width={24}
+                    <Link href={"/auth/login"}><a className={styles.login}><Image src={"/svg/noun-user-4756261.svg"} width={24}
                                                                         height={24}/></a></Link>
-                    <Link href={"#"}><a className={styles.search}><Image src={"/svg/noun-search-1868248.svg"} width={24}
+                    <Link href={"/auth/search"}><a className={styles.search}><Image src={"/svg/noun-search-1868248.svg"} width={24}
                                                                         height={24}/></a></Link>
                 </div>
             </div>

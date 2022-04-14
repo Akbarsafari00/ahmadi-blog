@@ -1,0 +1,5 @@
+@import "../variables";
+
+.button_input {
+  @include Button($primary-color,$light-color)
+}

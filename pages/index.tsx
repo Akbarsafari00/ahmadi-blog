@@ -11,7 +11,7 @@ import { PrismaClient } from '@prisma/client'
 const Home: NextPage = (props:any) => {
   return (
     <LayoutComponent title={"Index Page"} description={"Index Page"}>
-        <h1 className={styles.title}>
+        <h1>s
         </h1>
     </LayoutComponent>
   )
