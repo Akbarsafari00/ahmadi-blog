@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     @include MediaExtraSmall {
+        display: none;
         align-items: start;
         position: absolute;
         width: 300px;
@@ -106,7 +107,14 @@
 .header__action {
 
     padding: 0 1rem;
+    display: flex;
+
 }
 .header__action > .login {
-    @include Button($primary-color,$light-color)
+    @include Button($primary-color,$light-color);
+    margin-left: 0.5rem;
+}
+
+.header__action > .search {
+    @include Button($accent-color,$light-color)
 }
