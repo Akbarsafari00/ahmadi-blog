@@ -2,7 +2,7 @@ import {GetServerSideProps, GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import {PrismaClient} from '@prisma/client'
+
 import Layout from "../../components/Layout.component";
 import Card from "../../components/Card.component";
 import InputText from "../../components/InputText.component";
