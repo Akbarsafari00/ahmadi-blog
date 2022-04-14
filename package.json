@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx prisma migrate dev & node prisma/seed.js & next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,7 +14,9 @@
     "next": "12.1.4",
     "prisma": "^3.12.0",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "ts-node": "^10.7.0",
+    "@prisma/cli": "latest"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",
